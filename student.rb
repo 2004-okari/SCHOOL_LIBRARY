@@ -2,6 +2,8 @@ require_relative 'person'
 require_relative 'classroom'
 
 class Student < Person
+  attr_reader :classroom
+
   def initialize(id, name, age, classroom = nil)
     super(id, name, age)
     self.classroom = classroom
