@@ -1,3 +1,4 @@
+# main.rb
 require_relative 'app'
 
 def main
@@ -10,7 +11,7 @@ def main
     puts '3. Create a person'
     puts '4. Create a book'
     puts '5. Create a rental'
-    puts '6. List all rentals for a given person ID'
+    puts '6. List all rentals for a given person'
     puts '7. Quit'
 
     choice = gets.chomp.to_i
