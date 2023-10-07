@@ -21,7 +21,7 @@ class App
   def list_people
     puts 'List of People:'
     @people.each do |person|
-      puts "#{person.name} (ID: #{person.id})"
+      puts "Name: #{person.name} (ID: #{person.id})"
     end
   end
 
