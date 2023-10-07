@@ -28,32 +28,32 @@ class App
   def create_person
     puts "Enter person's name:"
     name = gets.chomp
-  
+
     puts "Enter person's age:"
     age = gets.chomp.to_i
-  
+
     puts "Enter person's type ('t' for teacher, 's' for student):"
     type = gets.chomp
-  
+
     case type
     when 't'
       puts "Enter teacher's specialization:"
       specialization = gets.chomp
-  
+
       person = Teacher.new(name, age, specialization)
     when 's'
       puts "Enter student's classroom:"
       classroom = gets.chomp
-  
-      puts "Does the student have parent permission? (y/n):"
+
+      puts 'Does the student have parent permission? (y/n):'
       parents_permission = gets.chomp.downcase == 'y'
-  
+
       person = Student.new(name, age, classroom, parents_permission)
     else
       puts "Invalid choice. Please choose 't' for teacher or 's' for student."
       return
     end
-  
+
     @people << person
     puts 'Person created successfully.'
   end

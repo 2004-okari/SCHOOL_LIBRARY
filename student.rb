@@ -11,7 +11,9 @@ class Student < Person
 
   def classroom=(classroom)
     @classroom = classroom
-    classroom.add_student(self) unless classroom.nil? || !classroom.respond_to?(:students) || classroom.students.include?(self)
+    return if classroom.nil? || !classroom.respond_to?(:students) || classroom.students.include?(self)
+
+    classroom.add_student(self)
   end
 
   def play_hooky
